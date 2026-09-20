@@ -1,112 +1,84 @@
-<h1 align="center">👁️ SentinelAI</h1>
+<div align="center">
 
-<p align="center">
-  <strong>AI-Powered Video Intelligence & Temporal RAG</strong>
-</p>
+# 🛰️ SentinelAI
 
-<p align="center">
-  <a href="https://fastapi.tiangolo.com/">
-    <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI">
-  </a>
-  <a href="https://www.ultralytics.com/">
-    <img src="https://img.shields.io/badge/YOLO-00FFFF?style=for-the-badge&logo=ultralytics&logoColor=black" alt="YOLO">
-  </a>
-  <a href="https://pytorch.org/">
-    <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch">
-  </a>
-  <a href="https://www.postgresql.org/">
-    <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-  </a>
-  <a href="https://github.com/pgvector/pgvector">
-    <img src="https://img.shields.io/badge/pgvector-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="pgvector">
-  </a>
-  <a href="https://docs.celeryq.dev/">
-    <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery">
-  </a>
-  <a href="https://redis.io/">
-    <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis" alt="Redis">
-  </a>
-  <a href="https://react.dev/">
-    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-  </a>
-</p>
+### AI-Powered Video Intelligence & Temporal RAG
 
-<p align="center">
-  Transform long, dense video feeds into structured, searchable, and explainable intelligence using Computer Vision, Event State Engines, Vector Search, and Temporal RAG.
-</p>
+*Transform raw surveillance and industrial video into searchable, explainable intelligence.*
 
-<p align="center">
-  <a href="#key-features">Key Features</a> •
-  <a href="#system-architecture">Architecture</a> •
-  <a href="#how-it-works">How It Works</a> •
-  <a href="#technology-stack">Tech Stack</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#api-reference">API</a>
-</p>
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)
+![Celery](https://img.shields.io/badge/Celery-Async%20Tasks-37814A?logo=celery&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-Broker-DC382D?logo=redis&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-pgvector-4169E1?logo=postgresql&logoColor=white)
+![React](https://img.shields.io/badge/React-Dashboard-61DAFB?logo=react&logoColor=black)
+![License](https://img.shields.io/badge/License-Personal%20Project-lightgrey)
+
+</div>
 
 ---
 
-## 🚀 Overview
+## 📖 Overview
 
-**SentinelAI** is an end-to-end video intelligence system designed to analyze long surveillance and industrial video feeds.
+**SentinelAI** is an AI-powered video intelligence system that analyzes long surveillance and industrial videos, detects and tracks objects, converts visual activity into timestamped events, and enables users to query videos using natural language.
 
-Instead of sending large amounts of raw video directly to an LLM, SentinelAI converts video into structured temporal events using computer vision and object tracking. These events are stored, embedded, indexed, and retrieved through a combination of relational filtering, temporal search, and semantic vector search.
-
-The retrieved evidence is then provided to an LLM to generate **grounded, timestamp-aware answers** to natural-language questions about the video.
+It combines **computer vision**, **event-based reasoning**, **vector search**, **Temporal RAG**, and **LLMs** to turn raw video into searchable and explainable intelligence.
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-- 🎞️ **Adaptive Frame Sampling** — Reduces redundant frame processing while preserving important temporal information.
-- 🎯 **Object Detection** — YOLO-based detection of objects and their bounding boxes.
-- 🧭 **Multi-Object Tracking** — ByteTrack-based persistent tracking identities across frames.
-- 🎨 **Attribute Extraction** — Extracts object-level attributes such as color.
-- ⚙️ **Stateful Event Engine** — Converts object trajectories into events such as entry, exit, movement, and stoppage.
-- 🧠 **Scene Understanding** — Generates high-level scene descriptions and classifications using an LLM.
-- 🔎 **Temporal RAG** — Retrieves relevant events using timestamps and semantic similarity.
-- 🗃️ **Vector Search** — Sentence Transformer embeddings stored using PostgreSQL and pgvector.
-- 💬 **Natural-Language Video Q&A** — Ask questions about events occurring inside the video.
-- 🔀 **Hybrid Retrieval** — Combines structured SQL filtering, temporal constraints, and semantic vector search.
-- 🛡️ **Grounded Responses** — LLM responses are generated from retrieved video evidence.
-- ⚡ **Asynchronous Processing** — Celery and Redis handle long-running video processing tasks.
-- 📊 **Interactive Dashboard** — React interface for video uploads, processing status, event timelines, and video querying.
+| Category | Capability |
+|---|---|
+| 🎞️ Video Processing | Long-video processing with adaptive frame sampling |
+| 🎯 Detection | YOLO-based object detection |
+| 🧭 Tracking | ByteTrack multi-object tracking with persistent identities |
+| 🎨 Attributes | Object attribute extraction (e.g., color) |
+| ⏱️ Events | Stateful event detection — entry, exit, movement, stoppage |
+| 🧠 Scene AI | AI-powered scene understanding and summarization |
+| 🔎 Embeddings | Event embeddings via Sentence Transformers |
+| 🗄️ Storage | PostgreSQL + pgvector for vector storage and retrieval |
+| 🔗 Retrieval | Temporal RAG for event-grounded video search |
+| 💬 Q&A | Natural-language video querying |
+| ⚡ Hybrid Search | Structured SQL + semantic vector retrieval |
+| 📍 Grounding | Timestamp-grounded answers with event sources |
+| ⚙️ Async | Background processing via Celery + Redis |
+| 🖥️ Dashboard | React UI for uploads, status, timelines, and querying |
 
 ---
 
 ## 🏗️ System Architecture
 
 ```text
-                              Video Upload
-                                   │
-                                   ▼
-                            FastAPI Backend
-                                   │
-                                   ▼
-                            Celery + Redis
-                                   │
-                                   ▼
-                       Adaptive Frame Sampling
-                                   │
-                                   ▼
-                            YOLO Detection
-                                   │
-                                   ▼
-                          ByteTrack Tracking
-                                   │
-                                   ▼
-                         Attribute Extraction
-                                   │
-                                   ▼
-                          Event State Engine
-                                   │
-                    ┌──────────────┴──────────────┐
-                    │                             │
-                    ▼                             ▼
-             Event Database              Scene Understanding
-                    │                             │
-                    ▼                             ▼
-             Event Embeddings              Scene Summary
+                         Video Upload
+                              │
+                              ▼
+                       FastAPI Backend
+                              │
+                              ▼
+                       Celery + Redis
+                              │
+                              ▼
+                  Adaptive Frame Sampling
+                              │
+                              ▼
+                      YOLO Detection
+                              │
+                              ▼
+                    ByteTrack Tracking
+                              │
+                              ▼
+                  Attribute Extraction
+                              │
+                              ▼
+                    Event State Engine
+                              │
+                    ┌─────────┴─────────┐
+                    ▼                   ▼
+             Event Database      Scene Understanding
+                    │
+                    ▼
+              Event Embeddings
                     │
                     ▼
              PostgreSQL + pgvector
@@ -114,199 +86,146 @@ The retrieved evidence is then provided to an LLM to generate **grounded, timest
                     ▼
              Query Understanding
                     │
-          ┌─────────┼─────────┐
-          │         │         │
-          ▼         ▼         ▼
-      Structured  Temporal   Semantic
-         SQL       Search    Vector Search
-          │         │         │
-          └─────────┼─────────┘
-                    │
+          ┌─────────┼──────────┬─────────┐
+          ▼         ▼          ▼
+     Structured   Temporal    Vector
+      Retrieval    Search     Search
+          │         │          │
+          └─────────┼──────────┘
                     ▼
-                 LLM / RAG
+                LLM / RAG
                     │
                     ▼
              Grounded Answer
                     │
                     ▼
-             React Dashboard
-🔄 How It Works
-1. Video Ingestion
+              React Dashboard
+```
 
-A video is uploaded through the FastAPI backend and stored for asynchronous processing.
+---
 
-Long-running processing tasks are delegated to Celery workers through Redis.
+## ⚙️ How It Works
 
-2. Adaptive Frame Sampling
+### 1. Video Processing
+Users upload a video through the FastAPI backend. Long-running processing is handled asynchronously using **Celery + Redis**, so the API stays responsive while videos process in the background.
 
-Instead of processing every frame, SentinelAI samples frames at a configured rate and evaluates frame changes to reduce redundant processing.
+### 2. Adaptive Frame Sampling
+Instead of processing every frame, SentinelAI samples frames at a configured rate and uses frame-change information to cut unnecessary work — preserving temporal fidelity on long videos.
 
-Raw Video
-   │
-   ├── Frame 1
-   ├── Frame 2
-   ├── Frame 3
-   ├── ...
-   └── Frame N
-          │
-          ▼
-   Adaptive Sampling
-          │
-          ▼
-   Relevant Frames
-3. Object Detection & Tracking
+### 3. Object Detection
+Sampled frames are processed with **YOLO**. Each detection includes:
+- Object class
+- Bounding box
+- Confidence
+- Tracking identity
 
-YOLO detects objects in sampled frames while ByteTrack associates detections across frames and maintains persistent track identities.
+### 4. Multi-Object Tracking
+**ByteTrack** associates detections across frames and maintains persistent identities, e.g.:
 
-Example:
-
+```text
 Person #1
 Person #2
 Person #3
+```
 
-These identities allow the system to reason about object behavior over time.
+This lets SentinelAI reason about how individual objects behave over time.
 
-4. Attribute Extraction
+### 5. Attribute Extraction
+Additional information is extracted from detected objects:
 
-Detected objects can be enriched with additional visual attributes.
-
-Example:
-
+```text
 Object: person
 Color: blue
-Bounding Box: (x1, y1, x2, y2)
-5. Event State Engine
+```
 
-The Event Engine converts object tracks into higher-level temporal events.
+Stored as event metadata for retrieval and analysis.
 
-Examples:
+### 6. Event Detection
+The Event Engine converts tracking data into higher-level temporal events:
 
-Person #1 entered at 12.5s
-Person #1 started moving at 15.0s
-Person #1 stopped at 21.5s
-Person #1 exited at 30.0s
+```text
+Person entered at 12.5 seconds
+Person started moving at 15.0 seconds
+Person stopped at 21.5 seconds
+Person exited at 30.0 seconds
+```
 
-Each event stores information such as:
+Each event carries: timestamp, event type, object class, track identity, confidence, description, and metadata.
 
-Timestamp
-Event type
-Object class
-Entity / track identity
-Confidence
-Description
-Metadata
-6. Event Embedding & Indexing
+### 7. Scene Understanding
+Detected objects are summarized into scene-level context using an LLM:
 
-Events are converted into searchable text representations.
+```text
+Scene Type: crowd
+Objects: person, sports ball
+```
 
-Example:
+### 8. Event Embeddings
+Each event becomes a searchable text representation, e.g.:
 
+```text
 At 21.5 seconds, person stopped.
+```
 
-Sentence Transformers generate embeddings for these events.
+**Sentence Transformers** generate embeddings, stored in **PostgreSQL + pgvector**.
 
-The embeddings and event metadata are stored in PostgreSQL with pgvector.
+### 9. Temporal RAG
+Rather than feeding an entire video to an LLM, SentinelAI retrieves relevant events using semantic similarity and temporal constraints — answering questions with grounded evidence.
 
-7. Query Understanding
+### 10. Natural-Language Query Understanding
+Questions are converted into structured retrieval requirements. For example:
 
-Natural-language questions are converted into structured retrieval requirements.
-
-Example:
-
-Question:
+```text
 "How many people entered?"
+→ Intent: count | Object: person | Event: entered
+```
 
-can be interpreted as:
-
-Intent: count
-Object: person
-Event: entered
-
-Another example:
-
-Question:
+```text
 "What happened around 20 seconds?"
+→ Temporal query around the requested timestamp
+```
 
-can be interpreted as a temporal query around the requested timestamp.
+The system combines **structured SQL filtering**, **timestamp filtering**, and **semantic vector search** as needed. Object classes are determined dynamically from what's detected in the video — not a fixed list.
 
-The system dynamically uses object classes present in the selected video rather than relying on a fixed predefined object list.
+### 11. Grounded Video Q&A
+Retrieved events are passed to the LLM as context. Answers include timestamps tied to evidence, and the system is designed to avoid inventing objects, actions, timestamps, or events not present in the retrieved context.
 
-8. Hybrid Retrieval
+---
 
-Depending on the question, SentinelAI can combine:
+## 💬 Example Queries
 
-Structured SQL Filtering
-          +
-Temporal Filtering
-          +
-Semantic Vector Search
+```text
+How many people entered?
+Which vehicles stopped?
+What happened around 20 seconds?
+What happened between 10 and 15 seconds?
+What happened to Person #3?
+Which objects exited the scene?
+Were there any objects that stopped moving?
+What objects were detected in the video?
+```
 
-This allows both precise queries and more open-ended semantic questions.
+---
 
-9. Grounded Video Q&A
+## 🧰 Technology Stack
 
-Retrieved events are passed to the LLM as context.
+<table>
+<tr><td><b>Backend</b></td><td>Python · FastAPI · Celery · Redis · SQLAlchemy</td></tr>
+<tr><td><b>Computer Vision</b></td><td>YOLO · ByteTrack · OpenCV · NumPy</td></tr>
+<tr><td><b>AI / ML</b></td><td>Sentence Transformers · LLM Scene Understanding · LLM Query Understanding · Temporal RAG</td></tr>
+<tr><td><b>Database</b></td><td>PostgreSQL · pgvector</td></tr>
+<tr><td><b>Frontend</b></td><td>React</td></tr>
+<tr><td><b>LLM Provider</b></td><td>Groq API</td></tr>
+</table>
 
-The LLM generates an answer based only on the available event evidence and can provide relevant timestamps.
+---
 
-User Question
-      │
-      ▼
-Query Understanding
-      │
-      ▼
-Relevant Events
-      │
-      ▼
-LLM Context
-      │
-      ▼
-Grounded Answer
-🧠 Temporal RAG
+## 📁 Project Structure
 
-SentinelAI uses an event-centric retrieval approach rather than passing an entire video directly to an LLM.
-
-Raw Video
-   │
-   ▼
-Computer Vision
-   │
-   ▼
-Structured Events
-   │
-   ▼
-Event Embeddings
-   │
-   ▼
-PostgreSQL + pgvector
-   │
-   ▼
-Relevant Event Retrieval
-   │
-   ▼
-LLM
-   │
-   ▼
-Timestamp-Grounded Answer
-
-This allows the system to connect natural-language questions with specific events occurring at specific points in the video.
-
-🛠️ Technology Stack
-Layer	Technologies
-Backend	Python, FastAPI
-Task Processing	Celery, Redis
-Computer Vision	YOLO, ByteTrack, OpenCV, NumPy
-AI / ML	Sentence Transformers, LLMs
-RAG	Temporal RAG, Vector Search
-Database	PostgreSQL, pgvector, SQLAlchemy
-LLM Provider	Groq API
-Frontend	React
-API	REST
-📁 Project Structure
+```text
 sentinel-ai/
 │
 ├── app/
-│   │
 │   ├── ai/
 │   │   ├── event_embedder.py
 │   │   ├── event_indexer.py
@@ -345,221 +264,192 @@ sentinel-ai/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-⚡ Getting Started
-Prerequisites
-Python 3.10+
-PostgreSQL with pgvector
-Redis
-Git
-A Groq API key
-1. Clone the Repository
+```
+
+---
+
+## 🚀 Installation
+
+**1. Clone the repository**
+```bash
 git clone https://github.com/raunak5131/sentinel-ai.git
 cd sentinel-ai
-2. Create Virtual Environment
-Windows
+```
+
+**2. Create a virtual environment**
+```bash
 python -m venv venv
+```
 
-Git Bash:
+**3. Activate the virtual environment**
 
+Windows Git Bash:
+```bash
 source venv/Scripts/activate
+```
 
-PowerShell:
-
+Windows PowerShell:
+```powershell
 venv\Scripts\Activate.ps1
-Linux / macOS
-python3 -m venv venv
-source venv/bin/activate
-3. Install Dependencies
-pip install --upgrade pip
+```
+
+**4. Install dependencies**
+```bash
 pip install -r requirements.txt
-4. Configure Environment Variables
+```
 
-Create a .env file in the project root:
+---
 
+## 🔐 Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
 DATABASE_URL=your_postgresql_connection_string
 REDIS_URL=your_redis_connection_string
 GROQ_API_KEY=your_groq_api_key
+```
 
-⚠️ Never commit .env or expose API keys publicly.
+> ⚠️ Do **not** commit `.env` to GitHub. A `.gitignore` is already included to keep environment variables, virtual environments, uploaded videos, model files, and other generated files out of version control.
 
-5. Initialize the Database
+---
+
+## 🗄️ Database Setup
+
+```bash
 python -m app.init_db
-▶️ Running SentinelAI
+```
 
-Run the API server:
+Make sure PostgreSQL and pgvector are available before starting video processing.
 
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+---
 
-In another terminal, start the Celery worker.
+## ▶️ Running the Application
 
-Windows
+**Start the FastAPI server**
+```bash
+uvicorn app.main:app --reload
+```
+
+**Start the Celery worker**
+```bash
 celery -A app.celery_app.celery_app worker --loglevel=info --pool=solo
-Linux / macOS
-celery -A app.celery_app.celery_app worker --loglevel=info
+```
 
-The API will be available at:
+> Celery worker configuration may vary by OS and deployment environment.
 
-http://localhost:8000
+---
 
-FastAPI interactive documentation:
+## 🔌 API Endpoints
 
-http://localhost:8000/docs
-🔌 API Reference
-Video Upload
+### Upload Video
+```http
 POST /videos/upload
-
+```
 Uploads a video and starts asynchronous processing.
 
-List Videos
+### List Videos
+```http
 GET /videos
+```
+Returns available videos and their processing status.
 
-Returns available videos and their processing states.
-
-Video Status
+### Video Status
+```http
 GET /videos/{video_id}/status
+```
+Returns the current processing status of a video.
 
-Returns the processing status of a video.
-
-Video Q&A
+### Query Video
+```http
 POST /videos/{video_id}/query
+```
 
-Example request:
-
+**Request**
+```json
 {
-  "question": "How many people entered?",
-  "limit": 8
+    "question": "How many people entered?",
+    "limit": 8
 }
+```
 
-Example response:
-
+**Response**
+```json
 {
-  "video_id": "video-id",
-  "question": "How many people entered?",
-  "answer": "Five people entered the scene.",
-  "sources": []
+    "video_id": "video-id",
+    "question": "How many people entered?",
+    "answer": "Five people entered the scene.",
+    "sources": []
 }
-💬 Example Queries
-How many people entered?
+```
 
-Which vehicles stopped?
+---
 
-What happened around 20 seconds?
+## 🔄 Processing Pipeline
 
-What happened between 10 and 15 seconds?
+```text
+Upload → Video Record Created → Celery Background Task
+       → Frame Sampling → Object Detection → Object Tracking
+       → Attribute Extraction → Event Generation → Event Storage
+       → Event Embedding → Vector Indexing → Scene Understanding
+       → Video Summary → Ready for Q&A
+```
 
-What happened to Person #3?
+## 🔍 Query Pipeline
 
-Which objects exited the scene?
+```text
+User Question → Query Understanding
+             → [ Structured / Temporal / Semantic Retrieval ]
+             → Relevant Events → Context Construction
+             → LLM → Grounded Answer + Sources
+```
 
-Were there any objects that stopped moving?
+---
 
-What objects were detected in the video?
-📊 Processing Pipeline
-Video Upload
-     │
-     ▼
-FastAPI
-     │
-     ▼
-Celery Worker
-     │
-     ▼
-Frame Sampling
-     │
-     ▼
-YOLO Detection
-     │
-     ▼
-ByteTrack Tracking
-     │
-     ▼
-Attribute Extraction
-     │
-     ▼
-Event Generation
-     │
-     ▼
-PostgreSQL
-     │
-     ▼
-Event Embeddings
-     │
-     ▼
-pgvector Index
-     │
-     ▼
-Video Ready for Q&A
-🔎 Query Pipeline
-                User Question
-                      │
-                      ▼
-             Query Understanding
-                      │
-           ┌──────────┼──────────┐
-           │          │          │
-           ▼          ▼          ▼
-       Structured   Temporal   Semantic
-          SQL        Search     Search
-           │          │          │
-           └──────────┼──────────┘
-                      │
-                      ▼
-                Event Context
-                      │
-                      ▼
-                     LLM
-                      │
-                      ▼
-             Grounded Answer
-                      │
-                      ▼
-                React UI
-🎯 Design Goals
-Event-Centric Understanding
+## 🎯 Design Goals
 
-Convert raw video frames into structured temporal events that can be stored, searched, and reasoned about.
+- **Event-Centric Video Understanding** — video is treated as structured temporal events, not just independent frames.
+- **Grounded AI Responses** — the LLM answers using retrieved event evidence, not guesswork.
+- **Scalable Processing** — async tasks, frame sampling, tracking, and vector retrieval support longer videos.
+- **Dynamic Querying** — object classes come from what's actually in the video, not a fixed predefined list.
 
-Grounded AI
+---
 
-Provide the LLM with retrieved event evidence instead of asking it to freely infer what happened in the video.
+## 🔮 Future Scope
 
-Efficient Processing
+- Real-time CCTV stream processing
+- Multi-camera video intelligence
+- Advanced anomaly detection
+- Cross-video event search
+- Person and object re-identification
+- Advanced temporal reasoning
+- Natural-language video clip retrieval
+- Real-time alerts and notifications
+- Industrial safety monitoring
+- Automated incident reporting
 
-Use adaptive frame sampling and asynchronous task processing to reduce unnecessary computation for long videos.
+---
 
-Hybrid Retrieval
+## 🌟 Project Highlights
 
-Combine relational database queries, timestamp filtering, and vector similarity search to handle different types of natural-language questions.
+```text
+Computer Vision + Object Tracking + Event-Based Reasoning
++ Vector Search + Temporal RAG + LLM Reasoning
++ Asynchronous Processing + Web Dashboard
+```
 
-Dynamic Querying
+The goal: transform raw video into structured, searchable, and explainable information.
 
-Use the objects and events actually detected in a video rather than relying on a fixed predefined object vocabulary.
+---
 
-🚀 Future Scope
- Real-time RTSP / CCTV stream processing
- Multi-camera video intelligence
- Person and object re-identification
- Advanced anomaly detection
- Natural-language video clip retrieval
- Automated incident reporting
- Real-time alerts and notifications
- Edge deployment with GPU acceleration
- Cross-video event search
-📌 Project Highlights
-Computer Vision
-       +
-Object Tracking
-       +
-Event-Based Reasoning
-       +
-Vector Search
-       +
-Temporal RAG
-       +
-LLM Reasoning
-       +
-Asynchronous Processing
-       +
-Interactive Dashboard
+## 📄 License
 
-SentinelAI brings these components together into a single pipeline for turning raw video into structured, searchable, and explainable intelligence.
+This project is developed as a personal AI/ML engineering project.
+
+---
+
+<div align="center">
+
+**[⭐ Star this repo](https://github.com/raunak5131/sentinel-ai)** if you find it useful!
+
+</div>
