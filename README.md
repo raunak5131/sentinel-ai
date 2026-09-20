@@ -442,12 +442,6 @@ The goal: transform raw video into structured, searchable, and explainable infor
 
 ---
 
-## 📄 License
-
-This project is developed as a personal AI/ML engineering project.
-
----
-
 <div align="center">
 
 **[⭐ Star this repo](https://github.com/raunak5131/sentinel-ai)** if you find it useful!
